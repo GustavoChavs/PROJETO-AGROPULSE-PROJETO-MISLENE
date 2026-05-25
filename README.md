@@ -168,26 +168,34 @@ A plataforma busca:
 # 📂 Estrutura do Projeto
 
 ```bash
-AgroPulse/
+PROJETO-AGROPULSE-PROJETO-MISLENE/
 │
-├── assets/
-│   ├── imagens/
-│   └── icons/
+├── agro_api/
+│   ├── __pycache__/
+│   └── app/
+│   └── README.md
+│   └── main.py
+│   └── requirements.txt
 │
-├── css/
-│   └── style.css
+├── site/
+│   └── css/
+│   └── img/
+│   └── js/
+│   └── clientes.html
+│   └── colheitas.html
+│   └── configuracoes.html
+│   └── estoque.html
+│   └── fazendas.html
+│   └── financeiro.html
+│   └── funcionarios.html
+│   └── login.html
+│   └── painel.html
+│   └── perfil.html
+│   └── relatorios.html
+│   └── safras.html
+│   └── talhoes.html
 │
-├── js/
-│   └── script.js
-│
-├── pages/
-│   ├── painel.html
-│   ├── nova-safra.html
-│   ├── analise.html
-│   ├── simulacao.html
-│   └── alertas.html
-│
-├── index.html
+├──
 └── README.md
 ```
 
