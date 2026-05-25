@@ -195,7 +195,6 @@ PROJETO-AGROPULSE-PROJETO-MISLENE/
 │   └── safras.html
 │   └── talhoes.html
 │
-├──
 └── README.md
 ```
 
