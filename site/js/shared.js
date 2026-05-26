@@ -155,11 +155,18 @@ document.addEventListener('DOMContentLoaded', () => {
 
   document.getElementById('sidebarOverlay')?.addEventListener('click', closeSidebar);
 
-  document.getElementById('pageContent')?.addEventListener('click', () => {
-    if (document.querySelector('.sidebar')?.classList.contains('open')) {
-      closeSidebar();
-    }
+  loadUserDisplay();
+  testApi();
+
+  document.addEventListener('click', (e) => {
+    const sidebar = document.querySelector('.sidebar');
+    if (!sidebar) return;
+    if (!sidebar.classList.contains('open')) return;
+    if (sidebar.contains(e.target)) return;
+    if (e.target.closest('.menu-toggle')) return;
+    closeSidebar();
   });
+});
 
   loadUserDisplay();
   testApi();
