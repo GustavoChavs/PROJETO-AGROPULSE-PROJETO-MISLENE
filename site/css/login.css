@@ -1,4 +1,7 @@
-* { margin: 0; padding: 0; box-sizing: border-box; }
+* { 
+  margin: 0; 
+  padding: 0; 
+  box-sizing: border-box; }
 
 body {
   font-family: 'DM Sans', system-ui, sans-serif;
@@ -65,13 +68,13 @@ body {
   margin-top: auto;
 }
 .left-footer h2 {
-  font-family: 'Syne', sans-serif;
-  font-size: 36px;
-  font-weight: 800;
+  font-family: 'DM Sans', sans-serif;
+  font-size: 34px;
+  font-weight: 700;
   color: #fff;
   line-height: 1.15;
   margin-bottom: 12px;
-  letter-spacing: -.5px;
+  letter-spacing: 0;
 }
 .left-footer p {
   color: rgba(255,255,255,.7);
@@ -79,7 +82,6 @@ body {
   line-height: 1.6;
   max-width: 380px;
 }
-
 
 .right {
   flex: 0.8;
@@ -100,12 +102,12 @@ body {
 }
 
 .login-form h1 {
-  font-family: 'Syne', sans-serif;
+  font-family: 'DM Sans', sans-serif;
   font-size: 28px;
-  font-weight: 800;
+  font-weight: 700;
   color: #1a2b1e;
   margin-bottom: 6px;
-  letter-spacing: -.4px;
+  letter-spacing: 0;
 }
 .login-form .subtitle {
   color: #8aa898;
