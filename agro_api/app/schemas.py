@@ -4,7 +4,7 @@ from datetime import date, datetime
 from decimal import Decimal
 
 
-# ── Fazenda ──────────────────────────────────────────────
+# ── Fazenda ──────────────────────────────────────────────────
 class FazendaBase(BaseModel):
     nome: str
     municipio: str
@@ -22,7 +22,7 @@ class FazendaOut(FazendaBase):
     criado_em: Optional[datetime] = None
 
 
-# ── Talhão ───────────────────────────────────────────────
+# ── Talhão ───────────────────────────────────────────────────
 class TalhaoBase(BaseModel):
     fazenda_id: int
     nome: str
@@ -38,14 +38,14 @@ class TalhaoOut(TalhaoBase):
     id: int
 
 
-# ── Safra ────────────────────────────────────────────────
+# ── Safra ────────────────────────────────────────────────────
+# Removidos: data_colheita_prevista, producao_kg
 class SafraBase(BaseModel):
     talhao_id: int
     cultura: str
     variedade: Optional[str] = None
     ano: int
     data_plantio: Optional[date] = None
-    data_colheita_prevista: Optional[date] = None
     status: Optional[str] = "planejada"
 
 class SafraCreate(SafraBase):
@@ -54,10 +54,9 @@ class SafraCreate(SafraBase):
 class SafraOut(SafraBase):
     model_config = ConfigDict(from_attributes=True)
     id: int
-    producao_kg: Optional[Decimal] = None
 
 
-# ── Funcionário ──────────────────────────────────────────
+# ── Funcionário ──────────────────────────────────────────────
 class FuncionarioBase(BaseModel):
     nome: str
     cpf: str
@@ -75,7 +74,7 @@ class FuncionarioOut(FuncionarioBase):
     ativo: int
 
 
-# ── Atividade Agrícola ───────────────────────────────────
+# ── Atividade Agrícola ───────────────────────────────────────
 class AtividadeBase(BaseModel):
     safra_id: int
     tipo_id: int
@@ -93,7 +92,7 @@ class AtividadeOut(AtividadeBase):
     id: int
 
 
-# ── Colheita ─────────────────────────────────────────────
+# ── Colheita ─────────────────────────────────────────────────
 class ColheitaBase(BaseModel):
     safra_id: int
     data: date
@@ -110,15 +109,14 @@ class ColheitaOut(ColheitaBase):
     id: int
 
 
-# ── Cliente ──────────────────────────────────────────────
+# ── Cliente ──────────────────────────────────────────────────
+# Removidos: contato, email
 class ClienteBase(BaseModel):
     razao_social: str
     cnpj_cpf: str
     tipo: Optional[str] = "PJ"
     municipio: Optional[str] = None
     estado: Optional[str] = None
-    contato: Optional[str] = None
-    email: Optional[str] = None
     limite_credito: Optional[Decimal] = None
 
 class ClienteCreate(ClienteBase):
@@ -130,7 +128,7 @@ class ClienteOut(ClienteBase):
     ativo: int
 
 
-# ── Fornecedor ───────────────────────────────────────────
+# ── Fornecedor ───────────────────────────────────────────────
 class FornecedorBase(BaseModel):
     razao_social: str
     cnpj: str
@@ -148,12 +146,12 @@ class FornecedorOut(FornecedorBase):
     ativo: int
 
 
-# ── Insumo ───────────────────────────────────────────────
+# ── Insumo ───────────────────────────────────────────────────
+# Removido: principio_ativo
 class InsumoBase(BaseModel):
     nome: str
     categoria: str
     unidade_medida: str
-    principio_ativo: Optional[str] = None
     registro_mapa: Optional[str] = None
     estoque_minimo: Optional[Decimal] = None
 
@@ -165,17 +163,15 @@ class InsumoOut(InsumoBase):
     id: int
 
 
-# ── Equipamento ──────────────────────────────────────────
+# ── Equipamento ──────────────────────────────────────────────
+# Removidos: placa_serie, horimetro, valor_atual
 class EquipamentoBase(BaseModel):
     descricao: str
     tipo: str
     marca: Optional[str] = None
     modelo: Optional[str] = None
     ano: Optional[int] = None
-    placa_serie: Optional[str] = None
-    horimetro: Optional[Decimal] = None
     status: Optional[str] = "disponivel"
-    valor_atual: Optional[Decimal] = None
 
 class EquipamentoCreate(EquipamentoBase):
     pass
