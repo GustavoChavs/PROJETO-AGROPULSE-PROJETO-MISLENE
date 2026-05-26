@@ -1,4 +1,4 @@
-from sqlalchemy import Column, Integer, String, Date, DateTime, Numeric, Enum, ForeignKey, Text, SmallInteger, DECIMAL
+from sqlalchemy import Column, Integer, String, Date, DateTime, Numeric, Enum, ForeignKey, Text, SmallInteger
 from sqlalchemy.orm import relationship
 from sqlalchemy.sql import func
 from app.database import Base
@@ -31,15 +31,13 @@ class Talhao(Base):
 
 class Safra(Base):
     __tablename__ = "safra"
-    id                     = Column(Integer, primary_key=True, index=True)
-    talhao_id              = Column(Integer, ForeignKey("talhao.id"), nullable=False)
-    cultura                = Column(String(80), nullable=False)
-    variedade              = Column(String(80))
-    ano                    = Column(Integer, nullable=False)
-    data_plantio           = Column(Date)
-    data_colheita_prevista = Column(Date)
-    producao_kg            = Column(Numeric(14, 3))
-    status                 = Column(
+    id           = Column(Integer, primary_key=True, index=True)
+    talhao_id    = Column(Integer, ForeignKey("talhao.id"), nullable=False)
+    cultura      = Column(String(80), nullable=False)
+    variedade    = Column(String(80))
+    ano          = Column(Integer, nullable=False)
+    data_plantio = Column(Date)
+    status       = Column(
         Enum("planejada", "em_andamento", "colhida", "cancelada"),
         nullable=False, default="planejada"
     )
@@ -100,8 +98,6 @@ class Cliente(Base):
     tipo           = Column(Enum("PF", "PJ"), default="PJ")
     municipio      = Column(String(100))
     estado         = Column(String(2))
-    contato        = Column(String(80))
-    email          = Column(String(120))
     limite_credito = Column(Numeric(14, 2), default=0)
     ativo          = Column(SmallInteger, default=1)
 
@@ -120,30 +116,26 @@ class Fornecedor(Base):
 
 class Insumo(Base):
     __tablename__ = "insumo"
-    id              = Column(Integer, primary_key=True, index=True)
-    nome            = Column(String(120), nullable=False)
-    principio_ativo = Column(String(120))
-    categoria       = Column(
+    id             = Column(Integer, primary_key=True, index=True)
+    nome           = Column(String(120), nullable=False)
+    categoria      = Column(
         Enum("defensivo", "fertilizante", "semente", "combustivel", "outro"),
         nullable=False
     )
-    unidade_medida  = Column(String(20), nullable=False)
-    registro_mapa   = Column(String(40))
-    estoque_minimo  = Column(Numeric(12, 3), default=0)
+    unidade_medida = Column(String(20), nullable=False)
+    registro_mapa  = Column(String(40))
+    estoque_minimo = Column(Numeric(12, 3), default=0)
 
 
 class Equipamento(Base):
     __tablename__ = "equipamento"
-    id          = Column(Integer, primary_key=True, index=True)
-    descricao   = Column(String(120), nullable=False)
-    tipo        = Column(String(60), nullable=False)
-    marca       = Column(String(60))
-    modelo      = Column(String(60))
-    ano         = Column(Integer)
-    placa_serie = Column(String(30))
-    horimetro   = Column(Numeric(10, 1), default=0)
-    status      = Column(
+    id        = Column(Integer, primary_key=True, index=True)
+    descricao = Column(String(120), nullable=False)
+    tipo      = Column(String(60), nullable=False)
+    marca     = Column(String(60))
+    modelo    = Column(String(60))
+    ano       = Column(Integer)
+    status    = Column(
         Enum("disponivel", "em_uso", "manutencao", "inativo"),
         default="disponivel"
     )
-    valor_atual = Column(Numeric(14, 2))
