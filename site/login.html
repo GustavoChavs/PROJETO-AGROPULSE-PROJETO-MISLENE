@@ -29,7 +29,7 @@
     </div>
 
     <div class="right">
-      <div class="login-form">
+      <form class="login-form" id="loginForm">
         <h1>Bem-vindo!</h1>
         <p class="subtitle">Acesse sua conta para continuar</p>
 
@@ -48,7 +48,7 @@
         <a href="#" class="forgot-link">Esqueci minha senha</a>
 
         <button type="button" class="btn-login" id="loginBtn" onclick="handleLogin()">Entrar</button>
-
+      </form>
         
     </div>
 
@@ -88,7 +88,7 @@
     if (localStorage.getItem('agropulse_logged') === '1') {
       window.location.href = 'painel.html';
     }
-    
+
   </script>
 </body>
 </html>
