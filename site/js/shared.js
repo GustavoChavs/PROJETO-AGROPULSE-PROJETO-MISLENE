@@ -1,4 +1,10 @@
-let API = localStorage.getItem('agropulse_api') || 'http://localhost:8000';
+// ─────────────────────────────────────────────
+//  ALTERE a linha abaixo com a URL da sua API no Railway
+//  Exemplo: 'https://agropulse-api-production.up.railway.app'
+// ─────────────────────────────────────────────
+const API_PRODUCAO = 'https://SUA-API.up.railway.app';
+
+let API = localStorage.getItem('agropulse_api') || API_PRODUCAO;
 
 
 function updateApi() {
@@ -144,11 +150,9 @@ async function del(endpoint, id) {
 }
 
 document.addEventListener('DOMContentLoaded', () => {
-  
   const apiInput = document.getElementById('apiUrl');
   if (apiInput) apiInput.value = API;
 
-  
   document.getElementById('sidebarOverlay')?.addEventListener('click', closeSidebar);
 
   loadUserDisplay();
