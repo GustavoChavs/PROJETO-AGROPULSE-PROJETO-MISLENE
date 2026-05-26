@@ -155,11 +155,11 @@ document.addEventListener('DOMContentLoaded', () => {
 
   document.getElementById('sidebarOverlay')?.addEventListener('click', closeSidebar);
 
-document.getElementById('pageContent')?.addEventListener('click', () => {
-  if (document.querySelector('.sidebar')?.classList.contains('open')) {
-    closeSidebar();
-  }
-});
+  document.getElementById('pageContent')?.addEventListener('click', () => {
+    if (document.querySelector('.sidebar')?.classList.contains('open')) {
+      closeSidebar();
+    }
+  });
 
   loadUserDisplay();
   testApi();
