@@ -80,7 +80,7 @@ body {
   max-width: 380px;
 }
 
-/* RIGHT PANEL */
+
 .right {
   flex: 0.8;
   background-color: #F5F5F5;
@@ -186,25 +186,6 @@ body {
   height: 1px;
   background: #e2e8e4;
 }
-
-.btn-google {
-  padding: 11px;
-  font-size: 14px;
-  font-family: inherit;
-  font-weight: 500;
-  background: #fff;
-  border: 1.5px solid #c8d4cc;
-  border-radius: 8px;
-  cursor: pointer;
-  color: #4a6054;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  gap: 10px;
-  transition: border-color .15s, background .15s;
-}
-.btn-google:hover { border-color: #1e6e3e; background: #f7f8f7; }
-
 .signup-text {
   text-align: center;
   font-size: 13px;
