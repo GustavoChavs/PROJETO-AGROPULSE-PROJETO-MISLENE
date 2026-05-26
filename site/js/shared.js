@@ -1,11 +1,6 @@
-/* ============================================================
-   AgroPulse — shared.js
-   Funções comuns a todas as páginas
-   ============================================================ */
-
 let API = localStorage.getItem('agropulse_api') || 'http://localhost:8000';
 
-/* ── API ── */
+
 function updateApi() {
   const el = document.getElementById('apiUrl');
   if (!el) return;
@@ -37,7 +32,7 @@ async function apiFetch(path, opts = {}) {
   return res.json();
 }
 
-/* ── UI HELPERS ── */
+
 function v(id) {
   const el = document.getElementById(id);
   return el ? el.value.trim() : '';
@@ -78,7 +73,7 @@ function toast(msg, err = false) {
   setTimeout(() => { t.className = 'toast'; }, 3000);
 }
 
-/* ── MODAL ── */
+
 function closeModal() {
   const o = document.getElementById('modalOverlay');
   if (o) o.classList.remove('open');
@@ -88,7 +83,7 @@ function closeModalOutside(e) {
   if (e.target.id === 'modalOverlay') closeModal();
 }
 
-/* ── SIDEBAR ── */
+
 function toggleSidebar() {
   document.querySelector('.sidebar')?.classList.toggle('open');
   document.getElementById('sidebarOverlay')?.classList.toggle('open');
@@ -99,7 +94,7 @@ function closeSidebar() {
   document.getElementById('sidebarOverlay')?.classList.remove('open');
 }
 
-/* ── USER ── */
+
 function loadUserDisplay() {
   const user   = JSON.parse(localStorage.getItem('agropulse_user') || '{}');
   const name   = user.name || 'Usuário';
@@ -114,7 +109,7 @@ function loadUserDisplay() {
   if (avatarEl) avatarEl.textContent = avatar;
 }
 
-/* ── TABLE HELPER ── */
+
 async function loadTable(module, containerId) {
   const el = document.getElementById(containerId);
   if (!el) return;
@@ -148,13 +143,12 @@ async function del(endpoint, id) {
   }
 }
 
-/* ── INIT ── */
 document.addEventListener('DOMContentLoaded', () => {
-  // Set API input value
+  
   const apiInput = document.getElementById('apiUrl');
   if (apiInput) apiInput.value = API;
 
-  // Close sidebar on overlay click
+  
   document.getElementById('sidebarOverlay')?.addEventListener('click', closeSidebar);
 
   loadUserDisplay();

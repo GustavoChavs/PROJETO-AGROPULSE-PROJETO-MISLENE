@@ -1,9 +1,3 @@
-/* ============================================================
-   AgroPulse — sidebar.js
-   Injeta a sidebar e a topbar em cada página
-   ============================================================ */
-
-/* ── SVG ICONS ── */
 const icons = {
   painel:        `<svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="7" height="7"/><rect x="14" y="3" width="7" height="7"/><rect x="3" y="14" width="7" height="7"/><rect x="14" y="14" width="7" height="7"/></svg>`,
   fazendas:      `<svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 9l9-7 9 7v11a2 2 0 01-2 2H5a2 2 0 01-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg>`,
@@ -18,7 +12,6 @@ const icons = {
   configuracoes: `<svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="3"/><path d="M19.4 15a1.65 1.65 0 00.33 1.82l.06.06a2 2 0 010 2.83 2 2 0 01-2.83 0l-.06-.06a1.65 1.65 0 00-1.82-.33 1.65 1.65 0 00-1 1.51V21a2 2 0 01-4 0v-.09A1.65 1.65 0 009 19.4a1.65 1.65 0 00-1.82.33l-.06.06a2 2 0 01-2.83-2.83l.06-.06A1.65 1.65 0 004.68 15a1.65 1.65 0 00-1.51-1H3a2 2 0 010-4h.09A1.65 1.65 0 004.6 9a1.65 1.65 0 00-.33-1.82l-.06-.06a2 2 0 012.83-2.83l.06.06A1.65 1.65 0 009 4.68a1.65 1.65 0 001-1.51V3a2 2 0 014 0v.09a1.65 1.65 0 001 1.51 1.65 1.65 0 001.82-.33l.06-.06a2 2 0 012.83 2.83l-.06.06A1.65 1.65 0 0019.4 9a1.65 1.65 0 001.51 1H21a2 2 0 010 4h-.09a1.65 1.65 0 00-1.51 1z"/></svg>`
 };
 
-/* ── NAV STRUCTURE ── */
 const NAV_ITEMS = [
   { section: 'Principal' },
   { id: 'painel',        label: 'Painel',         href: 'painel.html',         icon: icons.painel },
@@ -38,7 +31,6 @@ const NAV_ITEMS = [
   { id: 'configuracoes', label: 'Configurações',   href: 'configuracoes.html',  icon: icons.configuracoes },
 ];
 
-/* ── BUILD HELPERS ── */
 function buildNav(activePage) {
   return NAV_ITEMS.map(item => {
     if (item.section) {
@@ -51,7 +43,6 @@ function buildNav(activePage) {
   }).join('');
 }
 
-/* ── PUBLIC: renderLayout ── */
 window.renderLayout = function (activePage, pageTitle, showNewBtn) {
   const appEl = document.getElementById('app');
   if (!appEl) return;
@@ -110,7 +101,7 @@ window.renderLayout = function (activePage, pageTitle, showNewBtn) {
     </div>
   </div>`;
 
-  // Replace #app with full layout
+  
   const wrapper = document.createElement('div');
   wrapper.style.cssText = 'display:contents';
   wrapper.innerHTML = sidebarHTML;
