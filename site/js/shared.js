@@ -1,7 +1,3 @@
-// ─────────────────────────────────────────────
-//  ALTERE a linha abaixo com a URL da sua API no Railway
-//  Exemplo: 'https://agropulse-api-production.up.railway.app'
-// ─────────────────────────────────────────────
 const API_PRODUCAO = 'https://loving-enchantment-production-67e4.up.railway.app';
 
 let API = localStorage.getItem('agropulse_api') || API_PRODUCAO;
