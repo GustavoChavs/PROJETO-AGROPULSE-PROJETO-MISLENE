@@ -106,6 +106,14 @@ Sistema de notificações e acompanhamento.
 
 ---
 
+## Back-End
+* MySQL
+* RailWay
+* JavaScript
+* Python
+* FastAPI
+* API rest
+
 ## Ferramentas
 
 * Git
