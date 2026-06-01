@@ -17,17 +17,17 @@ O **AgroPulse** é um sistema web desenvolvido com foco na modernização da ges
 
 O projeto foi idealizado com o objetivo de unir:
 
-✅ Tecnologia
-✅ Experiência do usuário
-✅ Responsividade
-✅ Organização visual
-✅ Gestão inteligente para o agro
+• Tecnologia
+• Experiência do usuário
+• Responsividade
+• Organização visual
+• Gestão inteligente para o agro
 
 ---
 
 #  Funcionalidades
 
-## 🔗 Painel de Gestão
+##  Painel de Gestão
 
 Dashboard central com informações estratégicas da fazenda.
 
@@ -41,7 +41,7 @@ Dashboard central com informações estratégicas da fazenda.
 
 ---
 
-## 🔗 Nova Safra
+##  Nova Safra
 
 Cadastro e gerenciamento de novas safras.
 
@@ -54,7 +54,7 @@ Cadastro e gerenciamento de novas safras.
 
 ---
 
-## 🔗 Análise
+##  Análise
 
 Área voltada para métricas e desempenho agrícola.
 
@@ -68,7 +68,7 @@ Cadastro e gerenciamento de novas safras.
 
 ---
 
-## 🔗 Simulação
+##  Simulação
 
 Sistema de previsão e projeção agrícola.
 
@@ -81,7 +81,7 @@ Sistema de previsão e projeção agrícola.
 
 ---
 
-## 🔗 Alertas
+## Alertas
 
 Sistema de notificações e acompanhamento.
 
@@ -94,7 +94,7 @@ Sistema de notificações e acompanhamento.
 
 ---
 
-# 🔗 Tecnologias Utilizadas
+# Tecnologias Utilizadas
 
 ## Front-End
 
@@ -123,7 +123,7 @@ Sistema de notificações e acompanhamento.
 
 ---
 
-# 🔗 Design e Arquitetura
+# Design e Arquitetura
 
 O projeto foi desenvolvido utilizando conceitos modernos de UI/UX.
 
@@ -139,7 +139,7 @@ O projeto foi desenvolvido utilizando conceitos modernos de UI/UX.
 
 ---
 
-# 🔗 Responsividade
+# Responsividade
 
 O AgroPulse foi projetado para funcionar em diferentes dispositivos:
 
@@ -150,7 +150,7 @@ O AgroPulse foi projetado para funcionar em diferentes dispositivos:
 
 ---
 
-# 🔗 Objetivo do Projeto
+# Objetivo do Projeto
 
 O objetivo do AgroPulse é fornecer uma solução tecnológica acessível para auxiliar produtores rurais na gestão estratégica de suas propriedades.
 
@@ -164,7 +164,7 @@ A plataforma busca:
 
 ---
 
-# 🔗 Equipe de Desenvolvimento
+# Equipe de Desenvolvimento
 
 ## Desenvolvedores
 
@@ -176,7 +176,7 @@ A plataforma busca:
 
 ---
 
-# 🔗 Estrutura do Projeto
+# Estrutura do Projeto
 
 ```bash
 PROJETO-AGROPULSE-PROJETO-MISLENE/
@@ -211,7 +211,7 @@ PROJETO-AGROPULSE-PROJETO-MISLENE/
 
 ---
 
-# 🔗 Como Executar o Projeto
+# Como Executar o Projeto
 
 ## 1️⃣ Clone o repositório
 
@@ -241,7 +241,7 @@ Clique com botão direito → Open with Live Server
 
 ---
 
-# 🔗 Futuras Implementações
+# Futuras Implementações
 
 * Sistema de login
 * Banco de dados
@@ -255,18 +255,18 @@ Clique com botão direito → Open with Live Server
 
 ---
 
-# 🔗 Status do Projeto
+# Status do Projeto
 
  Projeto em desenvolvimento.
 
 ---
 
-# 🔗 Licença
+# Licença
 
 Este projeto foi desenvolvido para fins acadêmicos e educacionais.
 
 ---
 
-# 🔗 AgroPulse
+# AgroPulse
 
 > Tecnologia e inteligência impulsionando o agronegócio.
