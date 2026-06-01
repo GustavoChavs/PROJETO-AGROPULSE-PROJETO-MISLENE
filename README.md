@@ -161,7 +161,10 @@ A plataforma busca:
 ## Desenvolvedores
 
 * Diego Dias
-* Integrantes da Equipe AgroPulse
+* Gustavo Chaves
+* Igor dos Reis
+* Lucas Lopes
+* Lucas Henrique
 
 ---
 
