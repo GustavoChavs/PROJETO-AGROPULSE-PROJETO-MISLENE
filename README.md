@@ -143,10 +143,10 @@ O projeto foi desenvolvido utilizando conceitos modernos de UI/UX.
 
 O AgroPulse foi projetado para funcionar em diferentes dispositivos:
 
-✅ Desktop
-✅ Notebook
-✅ Tablet
-✅ Mobile
+✔️  Desktop
+✔️  Notebook
+✔️  Tablet
+✔️  Mobile
 
 ---
 
