@@ -243,15 +243,8 @@ Clique com botão direito → Open with Live Server
 
 # Futuras Implementações
 
-* Sistema de login
-* Banco de dados
-* Integração com APIs
-* Inteligência artificial
-* Dashboard avançado
-* Gráficos dinâmicos
-* Dark mode
-* Sistema de usuários
-* Integração com sensores agrícolas
+* Módulo Financeiro - Gerencie receitas, despesas, fluxo de caixa e orçamentos da sua operação agrícola.
+* Módulo de Relatórios - Visualize indicadores de produção, desempenho de safras, análises financeiras e exportações em PDF.
 
 ---
 
