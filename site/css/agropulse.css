@@ -301,7 +301,14 @@ body {
   border: 1px solid var(--c-border);
   border-radius: var(--radius);
   padding: 18px 20px;
-  box-shadow: var(--shadow-sm);
+  box-shadow: var(--shadow-sm);  
+  cursor: pointer;
+  transition: transform .2s ease;
+}
+
+.stat-card:hover {
+  transform: translateY(-3px);
+}
 }
 .stat-icon { margin-bottom: 10px; opacity: .7; }
 .stat-label {
