@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
+  <!-- Código comentado por Lucas Henrique Santos de Andrade -->
 <head>
   <meta charset="UTF-8"/>
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
@@ -14,6 +15,7 @@
     <div class="card">
       <div class="card-header"><span class="card-title">Clientes</span></div>
       <div class="card-body"><div id="table-clientes">Carregando...</div></div>
+      <!-- Quando não tem cliente cadastrado, o card mostra "Carregando" -->
     </div>
 
   </div>
@@ -28,6 +30,7 @@
       <div class="modal-footer">
         <button class="btn btn-ghost" onclick="closeModal()">Cancelar</button>
         <button class="btn btn-primary" onclick="submitForm()">Salvar</button>
+        <!-- Botões do card de cadastro de clientes novos -->
       </div>
     </div>
   </div>
@@ -41,6 +44,7 @@
       fields: r => [r.id, r.razao_social, r.cnpj_cpf, badge(r.tipo), r.municipio||'—', r.estado||'—', r.limite_credito ? 'R$ '+parseFloat(r.limite_credito).toLocaleString('pt-BR') : '—']
     };
     const PAYLOAD = () => ({ razao_social: v('f_razao_social'), cnpj_cpf: v('f_cnpj_cpf'), tipo: v('f_tipo'), municipio: v('f_municipio')||null, estado: v('f_estado')||null, limite_credito: parseFloat(v('f_limite_credito'))||null });
+    //Este trecho serve para puxar as informações da API e mostrar o cliente cadastrado no card, mostrando as colunas e as informações inseridas
 
     function reloadPage() { loadTable(MODULE, 'table-clientes'); }
 
@@ -57,7 +61,7 @@
         </div>`;
       document.getElementById('modalOverlay').classList.add('open');
     }
-
+    //Essa função é para abrir o card de novo cadastro de clientes
     async function submitForm() {
       try {
         await apiFetch(MODULE.endpoint, { method: 'POST', body: JSON.stringify(PAYLOAD()) });
@@ -66,7 +70,7 @@
         reloadPage();
       } catch(e) { toast('Erro: ' + e.message, true); }
     }
-
+    //Mensagem de sucesso/erro no envio do formulario do novo cliente
     function pageInit() { reloadPage(); }
     
 
