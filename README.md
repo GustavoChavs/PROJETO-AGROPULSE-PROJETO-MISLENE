@@ -257,7 +257,10 @@ Clique com botão direito → Open with Live Server
 # Licença
 
 Este projeto foi desenvolvido para fins acadêmicos e educacionais.
-[CONTRIBUIÇÕES](./CONTRIBUTIONS.md)
+# Meu Projeto
+
+- [CONTRIBUIÇÕES](./CONTRIBUTIONS.md)
+
 ---
 
 # AgroPulse
