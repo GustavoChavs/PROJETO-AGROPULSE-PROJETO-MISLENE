@@ -15,7 +15,7 @@
     <div class="card">
       <div class="card-header"><span class="card-title">Colheitas</span></div>
       <div class="card-body"><div id="table-colheitas">Carregando...</div></div>
-      <!-- Quando não tem colheita cadastrada, o card mostra "Carregando" -->
+      <!-- Quando está sendo atualizado ou não tem colheita cadastrada, o card mostra "Carregando" -->
     </div>
 
   </div>
@@ -30,7 +30,7 @@
       <div class="modal-footer">
         <button class="btn btn-ghost" onclick="closeModal()">Cancelar</button>
         <button class="btn btn-primary" onclick="submitForm()">Salvar</button>
-        <!-- Botões do card de cadastro colheitas novas -->
+        <!-- Botões do modal de cadastro colheitas novas -->
       </div>
     </div>
   </div>
@@ -60,7 +60,7 @@
         </div>`;
       document.getElementById('modalOverlay').classList.add('open');
     }
-    //Essa função é para abrir o card de novo cadastro de colheita
+    //Essa função é para abrir o modal de novo cadastro de colheita
 
     async function submitForm() {
       try {
@@ -70,7 +70,7 @@
         reloadPage();
       } catch(e) { toast('Erro: ' + e.message, true); }
     }
-    //Mensagem de sucesso/erro no envio do formulario da nova colheita
+    //Este envia os dados para a API, atualiza a tabela e mostra mensagem de sucesso/erro no envio do formulario da nova colheita
 
     function pageInit() { reloadPage(); }
     
@@ -80,6 +80,7 @@
         window.location.href = 'login.html';
         return;
       }
+      //caso não tenha usuario logado, quem tiver acessado o site será redirecionado para a pagina de login
       renderLayout('colheitas', 'Colheitas', true);
       pageInit();
     });
