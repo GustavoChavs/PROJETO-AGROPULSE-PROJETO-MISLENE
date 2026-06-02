@@ -14,14 +14,17 @@
     <div style="display:flex;gap:10px;margin-bottom:16px;">
       <button class="btn btn-ghost" id="tab-insumos" onclick="switchTab('insumos')">Insumos</button>
       <button class="btn btn-ghost" id="tab-equipamentos" onclick="switchTab('equipamentos')">Equipamentos</button>
+      <!-- Esta div são os botões para alternar entra o card de equipamentos e o card de insumos -->
     </div>
     <div class="card" id="card-insumos">
       <div class="card-header"><span class="card-title">Insumos</span></div>
       <div class="card-body"><div id="table-insumos">Carregando...</div></div>
+      <!-- Este é o card dos insumos, quando não tem nenhum aparece "Carregando"-->
     </div>
     <div class="card" id="card-equipamentos" style="display:none;">
       <div class="card-header"><span class="card-title">Equipamentos</span></div>
       <div class="card-body"><div id="table-equipamentos">Carregando...</div></div>
+      <!-- Este é o card dos equipamentos, quando não tem nenhum aparece "Carregando"-->
     </div>
 
   </div>
@@ -35,6 +38,7 @@
       <div class="modal-footer">
         <button class="btn btn-ghost" onclick="closeModal()">Cancelar</button>
         <button class="btn btn-primary" onclick="submitForm()">Salvar</button>
+        <!-- Botões do cadastro de nova colheita -->
       </div>
     </div>
   </div>
@@ -55,6 +59,7 @@
         fields: r => [r.id, r.descricao, r.tipo, r.marca||'—', r.modelo||'—', r.ano||'—', badge(r.status)]
       }
     };
+    //Puxa as informações dos insumos e equipamentos da API e os retorna nos seus respectivos card, além disso também mostra os nomes das colunas
     const FORMS = {
       insumos: `<div class="form-grid">
         <div class="form-group"><label>Nome</label><input id="f_nome" placeholder="Glifosato 480"/></div>
@@ -75,6 +80,7 @@
           <select id="f_status"><option value="disponivel">Disponivel</option><option value="em_uso">Em Uso</option><option value="manutencao">Manutencao</option><option value="inativo">Inativo</option></select>
         </div></div>`
     };
+    //formularios para inserção dos insumos e dos equipamentos
     const PAYLOADS = {
       insumos: () => ({ nome: v('f_nome'), categoria: v('f_categoria'), unidade_medida: v('f_unidade_medida'), registro_mapa: v('f_registro_mapa')||null, estoque_minimo: parseFloat(v('f_estoque_minimo'))||null }),
       equipamentos: () => ({ descricao: v('f_descricao'), tipo: v('f_tipo'), marca: v('f_marca')||null, modelo: v('f_modelo')||null, ano: parseInt(v('f_ano'))||null, status: v('f_status') })
@@ -90,10 +96,12 @@
         btn.style.fontWeight  = t===tab ? '600' : '400';
       });
     }
+    //função para trocar os cards de insumos e equipamentos e puxar da API suas informações
     function reloadPage() {
       loadTable(MODULES.insumos, 'table-insumos');
       loadTable(MODULES.equipamentos, 'table-equipamentos');
     }
+    // função para recarregar a pagina
     function openModal() {
       const titles = {insumos:'Novo Insumo', equipamentos:'Novo Equipamento'};
       document.getElementById('modalTitle').textContent = titles[activeTab];
@@ -109,6 +117,7 @@
         reloadPage();
       } catch(e) { toast('Erro: '+e.message, true); }
     }
+    //função para envio dos formularios
     function pageInit() {
       reloadPage();
       switchTab('insumos');
@@ -120,6 +129,7 @@
         window.location.href = 'login.html';
         return;
       }
+      //caso não tenha usuario logado, quem tiver acessado o site será redirecionado para a pagina de login
       renderLayout('estoque', 'Estoque', true);
       pageInit();
     });
