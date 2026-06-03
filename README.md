@@ -216,7 +216,7 @@ PROJETO-AGROPULSE-PROJETO-MISLENE/
 ## 1️⃣ Clone o repositório
 
 ```bash
-git clone https://github.com/seu-usuario/agropulse.git
+git clone https://github.com/GustavoChavs/PROJETO-AGROPULSE-PROJETO-MISLENE.git
 ```
 
 ---
@@ -225,19 +225,6 @@ git clone https://github.com/seu-usuario/agropulse.git
 
 Abra a pasta no Visual Studio Code.
 
----
-
-## 3️⃣ Execute com Live Server
-
-Instale a extensão:
-
-* Live Server
-
-Depois:
-
-```bash
-Clique com botão direito → Open with Live Server
-```
 
 ---
 
@@ -257,7 +244,6 @@ Clique com botão direito → Open with Live Server
 # Licença
 
 Este projeto foi desenvolvido para fins acadêmicos e educacionais.
-# Meu Projeto
 
 - [CONTRIBUIÇÕES](./CONTRIBUTIONS.md)
 
